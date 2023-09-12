@@ -58,14 +58,14 @@ class _HomePageState extends State<HomePage> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text("Name: "+name),
-                  Text("Id: ${id ?? 'N/A'}"),
-                  Text("Email: ${email ?? 'N/A'}"),
+                  Text("Id: "+id),
+                  Text("Email: "+email),
                 ],
               ),
               subtitle: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text("Token: ${token ?? 'N/A'}"),
+                  Text("Token: "+token),
                 ],
               ),
             ),
