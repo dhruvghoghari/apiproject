@@ -93,7 +93,7 @@ class _ProductwithModelState extends State<ProductwithModel> {
                               }
                           }
                       },
-                    ),
+                    ),  // delete
                     IconButton(
                       icon: Icon(Icons.edit),
                       onPressed: () async{
@@ -112,7 +112,7 @@ class _ProductwithModelState extends State<ProductwithModel> {
                         //     ))
                         // );
                       },
-                    ),
+                    ),  // Edit
                   ],
                 ),
                 trailing: Padding(

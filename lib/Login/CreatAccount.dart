@@ -19,8 +19,6 @@ class _CreatAccountState extends State<CreatAccount> {
   TextEditingController _password = TextEditingController();
   TextEditingController _cpassword = TextEditingController();
 
-
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
