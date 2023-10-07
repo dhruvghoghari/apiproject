@@ -40,6 +40,7 @@ dependencies:
   http:
   shared_preferences:
   intl:
+  dio:
 
 dev_dependencies:
   flutter_test:

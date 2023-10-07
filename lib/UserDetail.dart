@@ -35,8 +35,7 @@ class _UserDetailState extends State<UserDetail> {
               ),
               child: Column(
                 children: [
-                  Text("Name : " + (widget.obj.name?.firstname ?? "") + " " +
-                                   (widget.obj.name?.lastname ?? ""),
+                  Text("Name : " + (widget.obj.name?.firstname ?? "") + " " + (widget.obj.name?.lastname ?? ""),
                             style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 20,
