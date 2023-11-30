@@ -5,7 +5,6 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
 class FakePoductsWithModel extends StatefulWidget {
-  const FakePoductsWithModel({Key? key}) : super(key: key);
 
   @override
   State<FakePoductsWithModel> createState() => _FakePoductsWithModelState();
@@ -15,7 +14,6 @@ class _FakePoductsWithModelState extends State<FakePoductsWithModel> {
 
   List<Product>? alldata;
 
-
   getdata() async
   {
     Uri url= Uri.parse("https://fakestoreapi.com/products");
@@ -24,15 +22,10 @@ class _FakePoductsWithModelState extends State<FakePoductsWithModel> {
     {
       var body = response.body.toString();
       var json = jsonDecode(body);
-      // json loop
-      //json 1 single obj
-      //obj class obj convert
-      // obj alldata store
 
       setState(() {
         alldata = json.map<Product>((obj)=>Product.fromJson(obj)).toList();
       });
-
     }
     else
     {

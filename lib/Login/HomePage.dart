@@ -52,7 +52,7 @@ class _HomePageState extends State<HomePage> {
       body: SafeArea(
         child: Column(
           children: [
-            ElevatedButton(onPressed: (){}  , child: Text("Social Community")),
+            // ElevatedButton(onPressed: (){}  , child: Text("Social Community")),
             ListTile(
               title: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,

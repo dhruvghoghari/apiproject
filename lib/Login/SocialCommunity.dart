@@ -132,14 +132,15 @@ class _SocialCommunityState extends State<SocialCommunity> {
                             ),
                             Text(alldata![index].totalComments.toString(),
                               style: TextStyle(
-                                fontSize: 12.0,
+                                    fontSize: 12.0,
                               ),
                             ),
                             IconButton(
                               icon: Icon(Icons.add_comment_sharp,color: Colors.green),
                               onPressed: (){},
                             ),
-                          ],
+                          ]
+
                         ),
                       ],
                     ),

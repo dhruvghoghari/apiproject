@@ -4,6 +4,7 @@ import 'package:apiproject/AboutScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 class FakeProduct extends StatefulWidget {
+
   @override
   State<FakeProduct> createState() => _FakeProductState();
 }
@@ -17,41 +18,39 @@ class _FakeProductState extends State<FakeProduct> {
     //200 OK
     //400 Not Found
     //500 server
-    // Uri url= Uri.parse("https://fakestoreapi.com/products");
-    // var response = await http.get(url);
-    // if(response.statusCode==200)
-    //   {
-    //     var body = response.body.toString();
-    //     var json = jsonDecode(body);
-    //     return json;
-    //   }
-    // else
-    //   {
-    //     return [];
-    //   }
-
-
-
-    var params= {
-      "pname":"ABC"
-    };
-
-    // Dio dio = new Dio();                                                    // Dio Method PostApi Calling
-    // dio.options.headers['content-Type'] = 'application/json';
-    // dio.options.headers['token'] = '';
-    // var response = await dio.post("https://fakestoreapi.com/products",data: params);
-
-
-    var response = await Dio().get("https://fakestoreapi.com/products");      // Dio Method GetApi Calling
+    Uri url= Uri.parse("https://fakestoreapi.com/products");
+    var response = await http.get(url);
     if(response.statusCode==200)
       {
-        var json = response.data;
+        var body = response.body.toString();
+        var json = jsonDecode(body);
         return json;
       }
     else
       {
         return [];
       }
+
+    // var params= {
+    //   "pname":"ABC"
+    // };
+
+    // Dio dio = new Dio();                                                    // Dio Method PostApi Calling
+    // dio.options.headers['content-Type'] = 'application/json';
+    // dio.options.headers['token'] = '';
+    // var response = await dio.post("https://fakestoreapi.com/products",data: params);
+
+    //
+    // var response = await Dio().get("https://fakestoreapi.com/products");      // Dio Method GetApi Calling
+    // if(response.statusCode==200)
+    //   {
+    //     var json = response.data;
+    //     return json;
+    //   }
+    // else
+    //   {
+    //     return [];
+    //   }
   }
 
   @override

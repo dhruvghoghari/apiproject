@@ -6,7 +6,6 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:http/http.dart' as http;
 
 class CreatAccount extends StatefulWidget {
-  const CreatAccount({Key? key}) : super(key: key);
 
   @override
   State<CreatAccount> createState() => _CreatAccountState();
@@ -209,23 +208,20 @@ class _CreatAccountState extends State<CreatAccount> {
                     {
                     var json = jsonDecode(response.body.toString());
                     if (json["result"] == "success") {
-
-                    var message = json["message"].toString();
-                    ScaffoldMessenger.of(context).showSnackBar(
-                       SnackBar(content: Text(message, style: TextStyle(color: Colors.white),), backgroundColor: Colors.green,)
-                    );}
-
+                      var message = json["message"].toString();
+                      ScaffoldMessenger.of(context).showSnackBar(
+                         SnackBar(content: Text(message, style: TextStyle(color: Colors.white),), backgroundColor: Colors.green,)
+                      );}
                     else
                     {
-                    var message = json["message"].toString();
-                    ScaffoldMessenger.of(context).showSnackBar(
-                       SnackBar(content: Text(message,style: TextStyle(color: Colors.white),), backgroundColor: Colors.red,));
+                      var message = json["message"].toString();
+                      ScaffoldMessenger.of(context).showSnackBar(
+                         SnackBar(content: Text(message,style: TextStyle(color: Colors.white),), backgroundColor: Colors.red,));
+                      }
                     }
-                    }
-                    Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => LoginScreen())
-                    );
-
+                      Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => LoginScreen())
+                      );
                       }
                     },
                   child: Text("register", style: TextStyle(fontSize: 20.0),

@@ -1,3 +1,4 @@
+import 'package:apiproject/Dropdown.dart';
 import 'package:apiproject/FakeUser.dart';
 import 'package:apiproject/Product&Employe_Data/AddEmploye.dart';
 import 'package:apiproject/Product&Employe_Data/AddProducts.dart';
@@ -32,58 +33,59 @@ class _HomeScreenState extends State<HomeScreen> {
               title: Text("Fake Product"),
               onTap: () {
                 Navigator.of(context).push(
-                  MaterialPageRoute(builder: (context) => FakeProduct())
-                );
+                    MaterialPageRoute(builder: (context) => FakeProduct()));
               },
             ),
             ListTile(
               title: Text("Fake User"),
               onTap: () {
-                Navigator.of(context).push(
-                    MaterialPageRoute(builder: (context) => FakeUser())
-                );
+                Navigator.of(context)
+                    .push(MaterialPageRoute(builder: (context) => FakeUser()));
               },
             ),
             ListTile(
               title: Text("Fake Product With Model"),
               onTap: () {
-                Navigator.of(context).push(
-                    MaterialPageRoute(builder: (context) => FakePoductsWithModel())
-                );
+                Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => FakePoductsWithModel()));
               },
             ),
             ListTile(
               title: Text("Fake Store With User"),
               onTap: () {
-                Navigator.of(context).push(
-                    MaterialPageRoute(builder: (context) => FakestorewithUser())
-                );
+                Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => FakestorewithUser()));
               },
             ),
             ListTile(
               title: Text("Product with Model"),
               onTap: () {
-                Navigator.of(context).push(
-                    MaterialPageRoute(builder: (context) =>  ProductwithModel())
-                );
+                Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => ProductwithModel()));
               },
             ),
             ListTile(
               title: Text("Employ With Model"),
               onTap: () {
                 Navigator.of(context).push(
-                    MaterialPageRoute(builder: (context) => EmployWithModel())
-                );
+                    MaterialPageRoute(builder: (context) => EmployWithModel()));
               },
             ),
             ListTile(
               title: Text("Login"),
               onTap: () {
                 Navigator.of(context).push(
-                    MaterialPageRoute(builder: (context) => LoginScreen())
-                );
+                    MaterialPageRoute(builder: (context) => LoginScreen()));
               },
             ),
+            ListTile(
+              title: Text("Drop Down"),
+              onTap: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(builder: (context) => Dropdown()),
+                );
+              },
+            )
           ],
         ),
       ),
@@ -93,7 +95,8 @@ class _HomeScreenState extends State<HomeScreen> {
             ListTile(
               title: Text("Products"),
               onTap: () {
-                Navigator.push(context,
+                Navigator.push(
+                  context,
                   MaterialPageRoute(builder: (context) => AddProducts()),
                 );
               },
@@ -101,7 +104,8 @@ class _HomeScreenState extends State<HomeScreen> {
             ListTile(
               title: Text("Employes"),
               onTap: () {
-                Navigator.push(context,
+                Navigator.push(
+                  context,
                   MaterialPageRoute(builder: (context) => AddEmploy()),
                 );
               },
@@ -112,4 +116,3 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 }
-

@@ -1,10 +1,8 @@
 import 'dart:convert';
-
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
 class AddEmploy extends StatefulWidget {
-  const AddEmploy({Key? key}) : super(key: key);
 
   @override
   State<AddEmploy> createState() => _AddEmployState();
@@ -226,10 +224,6 @@ class _AddEmployState extends State<AddEmploy> {
                                     ScaffoldMessenger.of(context).showSnackBar(snackbar);
                                   }
                               }
-
-
-
-
                           },
                           style: ButtonStyle(
                             shape: MaterialStateProperty.all<RoundedRectangleBorder>(

@@ -82,7 +82,8 @@ class _LoginScreenState extends State<LoginScreen> {
 
                 var response = await http.post(url, body: jsonEncode(params), headers: headers);
 
-                if (response.statusCode == 200) {
+                if (response.statusCode == 200)
+                {
                   var json = jsonDecode(response.body.toString());
                   if (json["result"] == "success") {
 
